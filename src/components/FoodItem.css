@@ -1,16 +1,19 @@
+.food p {
+    font-family: "RedHatText-Regular";
+    font-weight: 600;
+    font-size: 10px;
+}
+
 .food-image {
     width: 150px;
     position: relative;
-    border: 1px solid red;
-}
-
-.food-desc {
-    border: 1px solid green;
+    margin-bottom: 1.5rem;
 }
 
 .food-image > img {
     width: 100%;
     border-radius: 5px;
+    display: block;
 }
 
 .cart-button {
@@ -25,19 +28,14 @@
     align-items: center;
     position: absolute;
     left: 50%;
-    top: 0;
-    transform: translate(-50%, 0);
+    bottom: 0;
+    transform: translate(-50%, 50%);
 }
 
 .cart-button:hover {
     cursor: pointer;
 }
 
-.food p {
-    font-family: "RedHatText-Regular";
-    font-weight: 600;
-    font-size: 16px;
-}
 
 .cart-button > svg {
     width: 0.9rem;
@@ -46,10 +44,21 @@
 
 .cart-button > p {
     color: var(--rose-900);
-    font-size: 10px;
     font-weight: 550;
+    font-size: 9px;
+}
+
+.food-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
 }
 
 p.food-type {
     font-weight: 200;
+    font-size: 9px;
+}
+
+.price {
+    color: #c73b0f;
 }
