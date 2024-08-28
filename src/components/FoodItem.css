@@ -1,11 +1,11 @@
 .food p {
     font-family: "RedHatText-Regular";
     font-weight: 600;
-    font-size: 10px;
+    font-size: 0.75rem;
 }
 
 .food-image {
-    width: 150px;
+    width: 100%;
     position: relative;
     margin-bottom: 1.5rem;
 }
@@ -17,8 +17,8 @@
 }
 
 .cart-button {
-    width: 100px;
-    padding: 0.4rem 0.5rem;
+    width: 7rem;
+    padding: 0.45rem 0.55rem;
     background-color: var(--rose-50);
     border: 0.5px solid var(--rose-500);
     border-radius: 20px;
@@ -45,7 +45,7 @@
 .cart-button > p {
     color: var(--rose-900);
     font-weight: 550;
-    font-size: 9px;
+    font-size: 0.7rem;
 }
 
 .food-desc {

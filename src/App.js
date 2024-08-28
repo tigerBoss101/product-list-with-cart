@@ -4,10 +4,12 @@ import FoodItem from "./components/FoodItem";
 function App() {
   return (
     <>
-      <h1>Desserts</h1>
-      <div className="foodItems">
-        <FoodItem />
-        <FoodItem />
+      <div className="food-selection">
+        <h1>Desserts</h1>
+        <div className="food-items">
+          <FoodItem />
+          <FoodItem />
+        </div>
       </div>
     </>
   );
