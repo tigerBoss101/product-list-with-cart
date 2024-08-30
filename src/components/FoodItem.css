@@ -2,6 +2,7 @@
     font-family: "RedHatText-Regular";
     font-weight: 600;
     font-size: 0.75rem;
+    color: var(--rose-900);
 }
 
 .food-image {
@@ -37,13 +38,12 @@
 }
 
 
-.cart-button > svg {
+.cart-button > img {
     width: 0.9rem;
     height: 0.9rem;
 }
 
 .cart-button > p {
-    color: var(--rose-900);
     font-weight: 550;
     font-size: 0.7rem;
 }
@@ -56,9 +56,9 @@
 
 p.food-type {
     font-weight: 200;
-    font-size: 9px;
+    font-size: 0.5rem;
 }
 
-.price {
+p.price {
     color: #c73b0f;
 }
