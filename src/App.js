@@ -1,5 +1,5 @@
 import './App.css';
-import FoodItem from "./components/FoodItem";
+import FoodGrid from "./components/FoodGrid";
 import Cart from "./components/Cart";
 
 function App() {
@@ -8,11 +8,7 @@ function App() {
       <div class="container">
         <div className="food-selection">
           <h1>Desserts</h1>
-          <div className="food-items">
-            <FoodItem />
-            <FoodItem />
-            <FoodItem />
-          </div>
+          <FoodGrid />
         </div>
         <Cart />
       </div>

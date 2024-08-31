@@ -1,0 +1,6 @@
+.food-grid {
+    width: min(100%, 60rem);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}

@@ -6,8 +6,10 @@ export default function Cart() {
     return (
         <div id="cart">
             <h3>Your Cart (0)</h3>
-            <img src={cakeImg} alt="Cake denoting empty cart" />
-            <p>Your added items will appear here</p>
+            <div class="cart-items">
+                <img src={cakeImg} alt="Cake denoting empty cart" />
+                <p>Your added items will appear here</p>
+            </div>
         </div>
     );
 }
