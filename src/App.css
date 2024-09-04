@@ -12,12 +12,12 @@
 
 .container {
   margin-inline: auto;
-  margin-top: 2rem;
+  margin-top: 4rem;
   padding-bottom: 3rem;
   width: calc(100% - 10rem);
   display: grid;
   grid-template-columns: 65% 1fr;
-  gap: 1.5rem;
+  gap: 3rem;
 }
 
 .food-selection {
