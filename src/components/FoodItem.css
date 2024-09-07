@@ -20,7 +20,7 @@
 .cart-button {
     width: 60%;
     height: 2.5rem;
-    padding: 0.45rem 0.55rem;
+    padding: 1rem 0.55rem;
     background-color: var(--rose-50);
     border: 0.5px solid var(--rose-500);
     border-radius: 20px;
@@ -62,4 +62,32 @@ p.food-type {
 
 p.price {
     color: #c73b0f;
+}
+
+.cart-button#active {
+    background-color: #c73b0f;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-button#active:hover {
+    cursor: default;
+}
+
+.cart-button#active img {
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 1.6px solid white;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.cart-button#active img:hover {
+    cursor: pointer;
+}
+
+.cart-button#active p {
+    color: white;
+    font-size: 0.9rem;
 }
