@@ -20,6 +20,16 @@
   gap: 3rem;
 }
 
+@media (max-width: 1080px) {
+  .container {
+    grid-template-columns: 1fr;
+    width: calc(100% - 2rem);
+    margin-top: 2rem;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
 .food-selection {
   display: flex;
   flex-direction: column;

@@ -9,6 +9,12 @@
     border-radius: 0.5rem;
 }
 
+@media (max-width: 800px) {
+    #cart {
+        height: 22.5rem;
+    }
+}
+
 #cart > h3 {
     font-size: 1.75rem;
     font-weight: 700;
@@ -24,7 +30,7 @@
 }
 
 .cart-items > img {
-    width: 35%;
+    width: clamp(8rem, 35%, 10rem);
 }
 
 .cart-items > p {
