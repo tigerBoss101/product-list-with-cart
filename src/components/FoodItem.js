@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import "./FoodItem.css";
 import cartImg from "../assets/images/icon-add-to-cart.svg";
 import increment from "../assets/images/icon-increment-quantity.svg"
@@ -7,14 +5,12 @@ import decrement from "../assets/images/icon-decrement-quantity.svg"
 
 const context = require.context("..", true);
 
-export default function FoodItem({ foodImg, foodType, foodName, price }) {
-    const [amount, setAmount] = useState(0);
-
+export default function FoodItem({ foodImg, foodType, foodName, price, quantity, setQuantity }) {
     const image = context(foodImg);
-    const increaseAmount = () => setAmount(prev => prev + 1);
-    const decreaseAmount = () => setAmount(prev => prev > 0 ? prev - 1 : 0);
+    const increaseAmount = () => setQuantity(quantity + 1);
+    const decreaseAmount = () => setQuantity(quantity - 1);
     let imageStyle = {};
-    if (amount > 0) {
+    if (quantity > 0) {
         imageStyle = {
             border: "3px solid #c73b0f"
         };
@@ -25,7 +21,7 @@ export default function FoodItem({ foodImg, foodType, foodName, price }) {
             <div className="food-image">
                 <img src={image} alt={foodName} style={imageStyle} />
                 {
-                    amount === 0 ?
+                    quantity === 0 ?
                     (
                         <div className="cart-button" onClick={increaseAmount}>
                             <img src={cartImg} alt="Cart Icon" />
@@ -36,7 +32,7 @@ export default function FoodItem({ foodImg, foodType, foodName, price }) {
                     (
                         <div className="cart-button" id="active">
                             <img src={decrement} alt="decrement" onClick={decreaseAmount} />
-                            <p>{amount}</p>
+                            <p>{quantity}</p>
                             <img src={increment} alt="increment" onClick={increaseAmount} />
                         </div>
                     )
