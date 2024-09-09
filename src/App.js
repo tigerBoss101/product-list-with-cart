@@ -14,7 +14,7 @@ function App() {
           <h1>Desserts</h1>
           <FoodGrid quantities={quantities} setQuantities={setQuantities} />
         </div>
-        <Cart />
+        <Cart quantities={quantities} />
       </div>
     </div>
   );
