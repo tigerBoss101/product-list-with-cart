@@ -23,10 +23,10 @@ export default function FoodItem({ foodImg, foodType, foodName, price, quantity,
                 {
                     quantity === 0 ?
                     (
-                        <div className="cart-button" onClick={increaseAmount}>
+                        <button className="cart-button" onClick={increaseAmount}>
                             <img src={cartImg} alt="Cart Icon" />
                             <p>Add to Cart</p>
-                        </div>
+                        </button>
                     )
                     :
                     (

@@ -45,9 +45,9 @@ export default function Cart({ quantities, setQuantities }) {
                             <img src={carbonNeutral} alt="Carbon Neutral" />
                             <p>This is a <b>carbon-neutral</b> delivery</p>
                         </div>
-                        <div id="confirm-order">
+                        <button id="confirm-order">
                             <p>Confirm Order</p>
-                        </div>
+                        </button>
                     </div>
                 )
             }
