@@ -1,19 +1,13 @@
 #cart {
     background-color: white;
     display: grid;
-    grid-template-rows: max-content 1fr;
+    grid-template-rows: max-content max-content;
     justify-items: stretch;
     align-items: center;
-    padding: 1rem 1.5rem;
+    padding: 1.5rem 1.5rem;
     border-radius: 0.5rem;
     height: max-content;
     gap: 1.25rem;
-}
-
-@media (max-width: 800px) {
-    #cart {
-        height: 22.5rem;
-    }
 }
 
 #cart > h3 {

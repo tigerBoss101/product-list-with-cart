@@ -2,7 +2,7 @@ import "./CartItem.css";
 
 import removeItem from "../assets/images/icon-remove-item.svg";
 
-export default function CartItem({ name, quantity, price }) {
+export default function CartItem({ name, quantity, price, onRemove }) {
     return (
         <div className="cart-item">
             <p className="cart-item-name">{name}</p>
@@ -11,7 +11,7 @@ export default function CartItem({ name, quantity, price }) {
                 <p className="cart-item-unit-price">@ ${price.toFixed(2)}</p>
                 <p className="cart-item-total-price">${(price * quantity).toFixed(2)}</p>
             </div>
-            <div className="remove-item-button">
+            <div className="remove-item-button" onClick={onRemove}>
                 <img src={removeItem} alt="Remove Item" />
             </div>
         </div>

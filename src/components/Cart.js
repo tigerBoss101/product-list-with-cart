@@ -5,7 +5,7 @@ import CartItem from "../components/CartItem";
 import carbonNeutral from "../assets/images/icon-carbon-neutral.svg";
 import foodData from "../data.json";
 
-export default function Cart({ quantities }) {
+export default function Cart({ quantities, setQuantities }) {
     const sum = quantities.reduce((acc, cur) => acc + cur, 0);
     const totalPrice = foodData.reduce((acc, cur, idx) => acc + cur.price * quantities[idx], 0);
     const cartItems = foodData.map((item, idx) => {
@@ -14,9 +14,11 @@ export default function Cart({ quantities }) {
         }
         return (
             <CartItem
+                key={idx}
                 name={item.name}
                 quantity={quantities[idx]}
                 price={item.price}
+                onRemove={() => {setQuantities([...quantities.slice(0,idx), 0, ...quantities.slice(idx+1)])}}
             />
         )
     });
