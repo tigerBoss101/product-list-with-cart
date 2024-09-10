@@ -11,8 +11,8 @@ export default function CartItem({ name, quantity, price, onRemove }) {
                 <p className="cart-item-unit-price">@ ${price.toFixed(2)}</p>
                 <p className="cart-item-total-price">${(price * quantity).toFixed(2)}</p>
             </div>
-            <div className="remove-item-button" onClick={onRemove}>
-                <img src={removeItem} alt="Remove Item" />
+            <div className="remove-item-button">
+                <img src={removeItem} alt="Remove Item" onClick={onRemove} />
             </div>
         </div>
     )

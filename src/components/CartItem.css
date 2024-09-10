@@ -45,7 +45,7 @@
     padding: 0.1rem;
 }
 
-.remove-item-button:hover {
+.remove-item-button > img:hover {
     cursor: pointer;
 }
 
