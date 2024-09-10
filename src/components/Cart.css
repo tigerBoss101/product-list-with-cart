@@ -75,6 +75,7 @@
     color: white;
     border-radius: calc(3.25rem / 2);
     font-weight: 500;
+    border: none;
 }
 
 #confirm-order:hover {
