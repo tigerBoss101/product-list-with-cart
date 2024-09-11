@@ -1,3 +1,4 @@
+import ReactModal from "react-modal";
 import "./Cart.css"
 
 import cakeImg from "../assets/images/illustration-empty-cart.svg";
