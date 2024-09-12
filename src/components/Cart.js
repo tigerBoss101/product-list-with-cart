@@ -1,28 +1,30 @@
-import ReactModal from "react-modal";
-import "./Cart.css"
+import { useState } from "react";
 
-import cakeImg from "../assets/images/illustration-empty-cart.svg";
 import CartItem from "../components/CartItem";
+import OrderModal from "./OrderModal";
+
+import "./Cart.css"
+import cakeImg from "../assets/images/illustration-empty-cart.svg";
 import carbonNeutral from "../assets/images/icon-carbon-neutral.svg";
 import foodData from "../data.json";
 
 export default function Cart({ quantities, setQuantities }) {
+    const [modalOpened, setModalOpened] = useState(false);
+
     const sum = quantities.reduce((acc, cur) => acc + cur, 0);
     const totalPrice = foodData.reduce((acc, cur, idx) => acc + cur.price * quantities[idx], 0);
-    const cartItems = foodData.map((item, idx) => {
-        if (quantities[idx] === 0) {
-            return <></>;
-        }
-        return (
-            <CartItem
-                key={idx}
-                name={item.name}
-                quantity={quantities[idx]}
-                price={item.price}
-                onRemove={() => {setQuantities([...quantities.slice(0,idx), 0, ...quantities.slice(idx+1)])}}
-            />
-        )
-    });
+    const cartItems = foodData.filter((_, idx) => quantities[idx] > 0)
+        .map((item, idx) => {
+            return (
+                <CartItem
+                    key={idx}
+                    name={item.name}
+                    quantity={quantities[idx]}
+                    price={item.price}
+                    onRemove={() => {setQuantities([...quantities.slice(0,idx), 0, ...quantities.slice(idx+1)])}}
+                />
+            )
+        });
 
     return (
         <div id="cart">
@@ -46,12 +48,13 @@ export default function Cart({ quantities, setQuantities }) {
                             <img src={carbonNeutral} alt="Carbon Neutral" />
                             <p>This is a <b>carbon-neutral</b> delivery</p>
                         </div>
-                        <button id="confirm-order">
+                        <button id="confirm-order" onClick={() => setModalOpened(true)}>
                             <p>Confirm Order</p>
                         </button>
                     </div>
                 )
             }
+            <OrderModal modalOpened={modalOpened} setModalOpened={setModalOpened} />
         </div>
     );
 }
