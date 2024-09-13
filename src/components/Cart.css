@@ -58,7 +58,7 @@
     gap: 0.5rem;
     justify-content: center;
     align-items: center;
-    background-color: var(--rose-100);
+    background-color: var(--rose-50);
     height: 3.25rem;
     border-radius: 0.6rem;
 }
