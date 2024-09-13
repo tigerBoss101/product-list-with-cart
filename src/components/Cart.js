@@ -13,14 +13,15 @@ export default function Cart({ quantities, setQuantities }) {
 
     const sum = quantities.reduce((acc, cur) => acc + cur, 0);
     const totalPrice = foodData.reduce((acc, cur, idx) => acc + cur.price * quantities[idx], 0);
-    const cartItems = foodData.filter((_, idx) => quantities[idx] > 0)
+    const allData = foodData.map((data, idx) => [data, quantities[idx]])
+    const cartItems = allData.filter(data => data[1] > 0)
         .map((item, idx) => {
             return (
                 <CartItem
                     key={idx}
-                    name={item.name}
-                    quantity={quantities[idx]}
-                    price={item.price}
+                    name={item[0].name}
+                    quantity={item[1]}
+                    price={item[0].price}
                     onRemove={() => {setQuantities([...quantities.slice(0,idx), 0, ...quantities.slice(idx+1)])}}
                 />
             )
