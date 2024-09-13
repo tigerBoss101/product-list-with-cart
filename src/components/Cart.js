@@ -55,7 +55,12 @@ export default function Cart({ quantities, setQuantities }) {
                     </div>
                 )
             }
-            <OrderModal modalOpened={modalOpened} setModalOpened={setModalOpened} />
+            <OrderModal
+                modalOpened={modalOpened}
+                setModalOpened={setModalOpened}
+                allData={allData}
+                setQuantities={setQuantities}
+            />
         </div>
     );
 }
