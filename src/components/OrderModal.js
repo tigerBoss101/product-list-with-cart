@@ -20,10 +20,18 @@ export default function OrderModal({ modalOpened, setModalOpened }) {
             </div>
             <div className="modal-items">
                 <ModalItem />
-                <p>Order Total</p>
-                <p>$46.50</p>
+                <ModalItem />
+                <div id="total-info">
+                    <p>Order Total</p>
+                    <p>$46.50</p>
+                </div>
             </div>
-            <button>Start New Order</button>
+            <button 
+                id="new-order-button"
+                onClick={() => setModalOpened(false)}
+            >
+                Start New Order
+            </button>
         </ReactModal>
     )
 }

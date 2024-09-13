@@ -11,17 +11,16 @@
 }
 
 .modal-content {
-    height: 35rem;
     width: 30rem;
     background-color: white;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     border-radius: 0.5rem;
     outline: none;
-    padding: 20px;
+    padding: 2rem 2rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.25rem;
 }
 
 .modal-content > img {
@@ -45,5 +44,37 @@
 }
 
 .modal-items {
-    background-color: var(--rose-100);
+    background-color: var(--rose-50);
+    padding-top: 0.3rem;
+    padding-inline: 1.5rem;
+}
+
+#total-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1rem;
+}
+
+#total-info p:first-child {
+    font-size: 0.9rem;
+}
+
+#total-info p:last-child {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+#new-order-button {
+    color: white;
+    background-color: #c73b0f;
+    font-weight: 450;
+    font-family: "RedHatText-Regular";
+    padding-block: 1rem;
+    border: none;
+    border-radius: 2rem;
+}
+
+#new-order-button:hover {
+    cursor: pointer;
 }

@@ -4,8 +4,8 @@
     row-gap: 0.3rem;
     column-gap: 0.8rem;
     align-items: center;
-    padding-block: 0.5rem;
-    border-bottom: 0.5px solid #f5f1ee;
+    padding-block: 0.9rem;
+    border-bottom: 1px solid #f5f1ee;
 }
 
 .modal-item-name {
