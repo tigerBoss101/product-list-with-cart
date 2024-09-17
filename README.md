@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution link](https://www.frontendmentor.io/solutions/food-product-catalog-with-react-yoFmPi7zAQ)
+- Live Site URL: [Live site](https://tigerboss101.github.io/product-list-with-cart/)
 
 ## My process
 
