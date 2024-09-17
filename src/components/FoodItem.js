@@ -6,7 +6,9 @@ import decrement from "../assets/images/icon-decrement-quantity.svg"
 const context = require.context("..", true);
 
 export default function FoodItem({ foodImg, foodType, foodName, price, quantity, setQuantity }) {
-    const image = context(foodImg);
+    const desktopImage = context(foodImg.desktop);
+    const tabletImage = context(foodImg.tablet);
+    const mobileImage = context(foodImg.mobile);
     const increaseAmount = () => setQuantity(quantity + 1);
     const decreaseAmount = () => setQuantity(quantity - 1);
     let imageStyle = {};
@@ -19,7 +21,11 @@ export default function FoodItem({ foodImg, foodType, foodName, price, quantity,
     return (
         <div className="food">
             <div className="food-image">
-                <img src={image} alt={foodName} style={imageStyle} />
+                <picture>
+                    <source media="(max-width:1025px)" srcset={tabletImage} />
+                    <source media="(max-width:768px)" srcset={mobileImage} />
+                    <img src={desktopImage} alt={foodName} style={imageStyle} />
+                </picture>
                 {
                     quantity === 0 ?
                     (

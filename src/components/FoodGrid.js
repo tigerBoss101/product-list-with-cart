@@ -7,7 +7,7 @@ export default function FoodGrid({ quantities, setQuantities }) {
     const foodItems = foodData.map((food, idx) => 
         <FoodItem
             key={idx}
-            foodImg={food.image.desktop}
+            foodImg={food.image}
             foodType={food.category}
             foodName={food.name}
             price={food.price}
